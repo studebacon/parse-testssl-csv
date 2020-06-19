@@ -8,4 +8,4 @@ Usefull for generating lists for use in reports or other verification tools.
 
 Use:
 
-parse-testssl-csv.sh <path to input file>
+parse-testssl-csv.sh (path to input file)
