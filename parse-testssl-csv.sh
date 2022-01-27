@@ -14,6 +14,6 @@ do
         mkdir SSLParse.log
     else
         of=${line//\"/}
-        grep $SEVERITY $1 | grep $line | cut -d "," -f 2,3 | cut -d "/" -f 2 | sed 's/"//g;s/,/:/g' | sort -u > SSLParse.log/$of
+        grep $SEVERITY $1 | grep $line | cut -d "," -f 2,3 | cut -d "/" -f 2 | sed 's/"//g;s/,/:/g' | sort -u >> SSLParse.log/$of
     fi
 done < <(cat $1 | grep $SEVERITY | cut -d "," -f 1 | sort -u)
